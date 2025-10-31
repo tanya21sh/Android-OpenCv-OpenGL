@@ -1,0 +1,3 @@
+rootProject.name = "Android-OpenCv-OpenGL"
+include(":app")
+include(":gl")

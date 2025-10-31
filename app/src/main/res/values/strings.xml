@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Edge Renderer</string>
+    <string name="permission_rationale">Camera access is required to stream frames.</string>
+    <string name="toggle_edges_on">Show Edges</string>
+    <string name="toggle_edges_off">Show Raw</string>
+    <string name="frame_stats_template">FPS: %.1f | %s</string>
+</resources>

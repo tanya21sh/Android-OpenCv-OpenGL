@@ -1,0 +1,27 @@
+# Android and Kotlin
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aar
+*.ap_*
+output.json
+
+# NDK and CMake
+obj/
+*.so
+
+# IntelliJ
+.idea/
+*.ipr
+*.iws
+
+# Node / web
+node_modules/
+web/dist/

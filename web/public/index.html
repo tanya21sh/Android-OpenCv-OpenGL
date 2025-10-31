@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edge Renderer Debug Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #111;
+            color: #f2f2f2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 24px;
+        }
+        header {
+            width: 100%;
+            max-width: 720px;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        main {
+            width: 100%;
+            max-width: 720px;
+            background: #1e1e1e;
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+        }
+        .frame-preview {
+            position: relative;
+            width: 100%;
+        }
+        .frame-preview img {
+            width: 100%;
+            border-radius: 8px;
+            display: block;
+        }
+        .overlay {
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            padding: 8px 12px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 6px;
+            font-family: "Courier New", monospace;
+            font-size: 14px;
+        }
+        .controls {
+            margin-top: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+        }
+        select {
+            background: #272727;
+            color: #f2f2f2;
+            border: 1px solid #444;
+            border-radius: 4px;
+            padding: 6px 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Edge Renderer Debug Viewer</h1>
+        <p>Static preview to validate frame post-processing pipeline.</p>
+    </header>
+    <main>
+        <section class="frame-preview">
+            <img id="frameImage" alt="Processed frame preview" />
+            <div class="overlay">
+                <div>FPS: <span id="fps">0.0</span></div>
+                <div>Resolution: <span id="resolution">0x0</span></div>
+            </div>
+        </section>
+        <section class="controls">
+            <label for="mode">Display Mode</label>
+            <select id="mode">
+                <option value="raw">Raw</option>
+                <option value="edges">Edges</option>
+            </select>
+        </section>
+    </main>
+    <script type="module" src="../dist/main.js"></script>
+</body>
+</html>
